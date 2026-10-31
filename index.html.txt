@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#152a43"><title>Cremated Remains Screening v1.03 Color Bubble Edition</title>
+<style>
+:root{color-scheme:light dark;--navy:#152a43;--bg:light-dark(#eef3f8,#101820);--card:light-dark(#fff,#1b2733);--text:light-dark(#17212b,#edf3f8);--muted:light-dark(#586979,#afbdca);--border:light-dark(#d7e0e8,#354453);--greenbg:light-dark(#d8f3e2,#123b29);--green:light-dark(#14532d,#9be4b5);--redbg:light-dark(#fce3e3,#4b2025);--red:light-dark(#991b1b,#ffb6b6);--amberbg:light-dark(#fff0c2,#463619);--amber:light-dark(#854d0e,#f8d58c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header{background:var(--navy);color:#fff;padding:calc(18px + env(safe-area-inset-top)) 18px 20px}.head,main,footer{max-width:760px;margin:auto}.head{display:flex;gap:13px;align-items:center}.mark{font-size:25px;background:#ffffff20;border-radius:14px;padding:10px}.kicker{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#d5e0ec}h1{font-size:21px;margin:3px 0}.version{font-size:11px;border:1px solid #ffffff55;border-radius:99px;padding:3px 8px;display:inline-block;margin-top:5px}main{padding:18px 14px 36px}.notice,.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:13px}.notice{font-size:13px;color:var(--muted)}.section-title{font-size:17px;margin:4px 0 10px}.paths{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.path{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:13px;text-align:left;min-height:76px;font:inherit;cursor:pointer}.path strong{display:block;font-size:14px;margin-top:4px}.path[aria-pressed=true]{outline:2px solid #47759c;background:light-dark(#e9f1f8,#20384d)}h2{font-size:16px;margin:0 0 10px}.hint{font-size:13px;color:var(--muted);margin:0 0 12px}.field{border:0;padding:0;margin:14px 0}.field legend{font-weight:650;font-size:14px;margin-bottom:8px}.options{display:grid;gap:8px}.opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--border);border-radius:10px;padding:10px;font-size:14px}.opt input{margin-top:4px;accent-color:#244768}.opt:has(input:checked){border-color:#47759c;background:light-dark(#edf4fa,#20384d)}.reminder{background:var(--amberbg);color:var(--amber);border-radius:11px;padding:12px;margin-top:12px;font-size:14px}.result{border-radius:13px;padding:15px;margin-top:14px}.result h2{font-size:19px;margin:0 0 7px}.result p{font-size:14px;margin:6px 0}.success{background:var(--greenbg);color:var(--green)}.danger{background:var(--redbg);color:var(--red)}.warning{background:var(--amberbg);color:var(--amber)}.pill{display:inline-block;border:1px solid currentColor;border-radius:99px;padding:3px 8px;font-size:11px;font-weight:700;margin-bottom:8px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.btn{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:10px;padding:11px 14px;font:inherit;font-weight:650}.primary{background:var(--navy);color:white}footer{padding:0 18px 28px;color:var(--muted);font-size:12px}@media(min-width:600px){main{padding:24px 20px}.paths{grid-template-columns:repeat(4,1fr)}.path{min-height:94px}}
+
+/* Bubble-style mobile interface */
+body{font-size:16px;line-height:1.5}
+header{padding:calc(22px + env(safe-area-inset-top)) 18px 24px;background:linear-gradient(145deg,#152a43,#254c70)}
+.mark{font-size:27px;border-radius:18px;padding:12px;background:#ffffff24}
+h1{font-size:22px;letter-spacing:-.025em}
+main{padding:20px 14px 38px}
+.notice,.panel{border-radius:22px;padding:17px;margin-bottom:15px;box-shadow:0 3px 14px #132b420a}
+.notice{border-left:5px solid #6d96b7}
+.section-title{font-size:18px;font-weight:750;margin:8px 4px 12px}
+.paths{gap:10px}
+.path{border-radius:20px;padding:15px 12px;min-height:104px;text-align:left;box-shadow:0 3px 10px #132b4208;transition:transform .12s,border-color .12s}
+.path:active{transform:scale(.98)}
+.path strong{font-size:14px;line-height:1.25;margin-top:8px}
+.path[aria-pressed=true]{outline:none;border:2px solid #477da6;background:light-dark(#e4f1fb,#20384d);box-shadow:0 0 0 3px light-dark(#d5e9f8,#1b3041)}
+#form.panel{border-radius:24px;padding:18px}
+#form h2{font-size:18px;margin:2px 0 11px}
+.hint{font-size:14px;line-height:1.45}
+.field{margin:18px 0 20px}
+.field legend{font-size:15px;margin-bottom:10px}
+.options{gap:9px}
+.opt{border-radius:17px;padding:13px 14px;font-size:15px;line-height:1.35;min-height:48px;align-items:center;background:light-dark(#fbfdff,#18232e)}
+.opt input{width:19px;height:19px;flex:0 0 19px;margin:0 2px 0 0;accent-color:#2e638b}
+.opt:has(input:checked){border:2px solid #477da6;background:light-dark(#e7f2fb,#20384d);padding:12px 13px}
+.reminder{border-radius:19px;padding:15px 16px;margin-top:15px;line-height:1.45}
+.reminder p{margin:8px 0 0}
+.result{border-radius:24px;padding:20px;margin-top:16px;box-shadow:0 5px 18px #132b4210}
+.result h2{font-size:22px;letter-spacing:-.02em}
+.result p{font-size:15px;line-height:1.45}
+.pill{padding:5px 10px;letter-spacing:.04em}
+.actions{gap:10px;margin:16px 0 20px}
+.btn{border-radius:999px;padding:13px 18px;min-height:48px}
+.primary{background:#244c70}
+footer{padding:0 18px 30px;line-height:1.5}
+@media(min-width:600px){main{padding:25px 20px}.paths{grid-template-columns:repeat(2,1fr)}.path{min-height:100px}}
+
+/* Version 1.03: larger, colorful, thumb-friendly controls */
+:root{--navy:#173b68;--border:light-dark(#d6e2f0,#3a4b61)}
+body{font-size:18px;line-height:1.55}
+header{background:linear-gradient(135deg,#173b68 0%,#345ca8 52%,#6b4eb5 100%);padding:calc(28px + env(safe-area-inset-top)) 20px 30px}
+.head{gap:16px;align-items:flex-start}.mark{font-size:34px;padding:14px;border-radius:22px;background:#ffffff2b}
+.kicker{font-size:14px;letter-spacing:.1em}h1{font-size:clamp(28px,7vw,38px);line-height:1.12;letter-spacing:-.035em;margin:8px 0 12px}.version{font-size:12px;padding:6px 11px;background:#ffffff18}
+main{padding:22px 14px 42px}.notice,.panel{border-radius:26px;padding:21px;margin-bottom:18px}.notice{font-size:16px;border-left:7px solid #f4c95d}.section-title{font-size:23px;line-height:1.2;margin:20px 4px 14px}
+.paths{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.path{min-height:132px;padding:17px 14px;border-radius:25px;border:2px solid transparent;font-size:25px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 6px 16px #122d4d16}.path strong{font-size:17px;line-height:1.25;margin:0}.path[data-path="no"]{background:light-dark(#e0f7e9,#173d2b);color:light-dark(#12633c,#b7f4d0);border-color:#38a56b}.path[data-path="system"]{background:light-dark(#fff0d7,#4a3118);color:light-dark(#8a4b05,#ffda9a);border-color:#e7a33e}.path[data-path="partial"]{background:light-dark(#e4f1ff,#1b3555);color:light-dark(#174c91,#b7d8ff);border-color:#4d8de0}.path[data-path="full"]{background:light-dark(#f0e7ff,#382653);color:light-dark(#6532a2,#e1c8ff);border-color:#9b6be0}.path[aria-pressed=true]{outline:4px solid light-dark(#20344d,#dbeafe);outline-offset:2px;filter:saturate(1.15);transform:translateY(-2px)}
+#form.panel{border-radius:28px;padding:21px}#form h2{font-size:24px;margin:2px 0 14px}.hint{font-size:17px;line-height:1.5}.field{margin:22px 0 24px}.field legend{font-size:19px;line-height:1.3;margin-bottom:12px}.options{gap:11px}.opt{border-radius:20px;padding:16px;font-size:17px;line-height:1.4;min-height:64px;align-items:center;background:light-dark(#fff,#182432);border:2px solid var(--border)}.opt input{width:24px;height:24px;flex:0 0 24px;margin:0 5px 0 0;accent-color:#315db2}.opt:has(input:checked){border:2px solid #4b79d8;background:light-dark(#e8f1ff,#20395a);padding:16px}.reminder{border-radius:22px;padding:18px;font-size:17px;line-height:1.5}.result{border-radius:28px;padding:24px;margin-top:20px;border:2px solid currentColor;box-shadow:0 8px 22px #132b4214}.result h2{font-size:clamp(27px,7vw,36px);line-height:1.1;letter-spacing:-.025em}.result p{font-size:17px;line-height:1.5}.pill{font-size:13px;padding:6px 12px}.actions{gap:12px;margin:20px 0 24px}.btn{font-size:17px;border-radius:18px;padding:16px 20px;min-height:58px;flex:1}.primary{background:#254f9e}footer{font-size:14px;line-height:1.5}
+@media(min-width:600px){main{padding:28px 22px}.paths{grid-template-columns:repeat(2,minmax(0,1fr))}.path{min-height:122px}}
+@media(max-width:360px){h1{font-size:27px}.path{min-height:118px;padding:13px 9px}.path strong{font-size:15px}.opt{padding:13px;font-size:16px}}
+
+</style></head>
+<body>
+<header><div class="head"><div class="mark" aria-hidden="true">⛨</div><div><div class="kicker">Screening decision assistant</div><h1>Cremated Remains Screening</h1><span class="version">VERSION 1.03 · COLOR BUBBLE EDITION</span></div></div></header>
+<main>
+<div class="notice"><strong>TEAM VERIFICATION BUILD</strong><br>Use for supervised testing only. Always verify each result against the current approved procedure before operational use.</div>
+<h2 class="section-title">1. Choose the X-ray result</h2>
+<div class="paths"><button class="path" data-path="no" aria-pressed="false">✓<strong>No system alarm</strong></button><button class="path" data-path="system" aria-pressed="false">⚠<strong>System alarm</strong></button><button class="path" data-path="partial" aria-pressed="true">◩<strong>Partial shield</strong></button><button class="path" data-path="full" aria-pressed="false">▣<strong>Full shield</strong></button></div>
+<section id="form" class="panel" style="margin-top:13px"></section><section id="outcome" aria-live="polite"></section>
+<div class="actions"><button class="btn" id="reset">Reset scenario</button><button class="btn primary" id="copy">Copy test result</button></div>
+</main><footer>Version 1.03 COLOR BUBBLE EDITION · Interactive prototype · This page does not transmit or save test data. Not a substitute for the approved screening procedure.</footer>
+<script>
+const s={path:"partial",volume:"350plus",etd:"clear",c1:"negative",c2:"negative",er:"pending",cr:"pending",threat:"no"};
+const $=id=>document.getElementById(id), form=$("form"),out=$("outcome");
+function radios(key,label,choices){return `<fieldset class="field"><legend>${label}</legend><div class="options">${choices.map(([v,t])=>`<label class="opt"><input type="radio" name="${key}" value="${v}" ${s[key]===v?"checked":""}><span>${t}</span></label>`).join("")}</div></fieldset>`}
+function panel(title,body){return `<h2>${title}</h2>${body}`}
+function render(){
+document.querySelectorAll("[data-path]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.path===s.path)));
+if(s.path==="full"){form.innerHTML=panel("Full Shield",`<p class="hint">No ETD/CMT testing and no alarm-resolution steps in this pathway.</p><div class="reminder"><strong>DO NOT CLEAR URN.</strong> Refer to approved passenger disposition options.</div>`);out.innerHTML=`<div class="result danger"><span class="pill">FINAL OUTCOME</span><h2>DO NOT CLEAR URN</h2><p>Full shield: urn cannot proceed.</p><p><strong>Passenger:</strong> Follow approved procedure and disposition options.</p></div>`;return}
+const partial=s.path==="partial",system=s.path==="system",no=s.path==="no";
+let b=`<p class="hint">${partial?"Partial shield: perform ETD and both CMT/colourimetric tests. The urn cannot proceed regardless of results.":system?"System alarm present: urn may be cleared only when ETD and both CMT results are clear.":"No system alarm: follow required testing. The approved under-350 mL shortcut may apply only when its conditions are met."}</p>`;
+if(!system)b+=radios("volume","Urn volume",[["under","Under 350 mL"],["350plus","350 mL or greater"]]);
+const maybeNotDone=no?[["notdone","Not performed"]]:[];
+b+=radios("etd","ETD result",[["clear","Clear — no alarm"],["alarm","Alarm"],...maybeNotDone]);
+b+=radios("c1","CMT / colourimetric result 1",[["negative","Negative — clear"],["positive","Positive — alarm"],...maybeNotDone]);
+b+=radios("c2","CMT / colourimetric result 2",[["negative","Negative — clear"],["positive","Positive — alarm"],...maybeNotDone]);
+const ea=s.etd==="alarm",ca=s.c1==="positive"||s.c2==="positive",any=ea||ca;
+if(any){
+b+=`<div class="reminder"><strong>Alarm-resolution reminder</strong>${ea?"<p>ETD alarm: <strong>Perform ETD alarm resolution.</strong></p>":""}${ca?"<p>One or both CMT results positive: <strong>Perform CMT alarm resolution.</strong></p>":""}${partial?"<p><strong>Even if alarms are resolved, the partially shielded urn cannot proceed.</strong></p>":""}</div>`;
+if(ea)b+=radios("er","ETD alarm resolution outcome",[["pending","Not yet resolved"],["resolved","Resolved"],["unresolved","Cannot be resolved"]]);
+if(ca)b+=radios("cr","CMT alarm resolution outcome",[["pending","Not yet resolved"],["resolved","Resolved"],["unresolved","Cannot be resolved"]]);
+if((ea&&s.er==="resolved")||(ca&&s.cr==="resolved"))b+=radios("threat","During resolution, was a threat or concealed weapon found?",[["no","No"],["yes","Yes"]]);
+}
+form.innerHTML=panel("2. Record each test result",b);
+const unresolved=(ea&&s.er==="unresolved")||(ca&&s.cr==="unresolved");
+const threatFound=s.threat==="yes"&&((ea&&s.er==="resolved")||(ca&&s.cr==="resolved"));
+const emergency=unresolved||threatFound;
+const clear=s.etd==="clear"&&s.c1==="negative"&&s.c2==="negative";
+const allResolved=(!ea||s.er==="resolved")&&(!ca||s.cr==="resolved")&&s.threat==="no";
+const shortcut=no&&s.volume==="under"&&s.etd==="notdone"&&s.c1==="notdone"&&s.c2==="notdone";
+let title,detail,cls;
+if(emergency){title="EMERGENCY PROCEDURES";detail=unresolved?"An alarm cannot be resolved. Initiate Emergency Procedures.":"A threat or concealed weapon was detected during resolution. Initiate Emergency Procedures.";cls="danger"}
+else if(partial){title="DO NOT CLEAR URN";detail=any&&!allResolved?"Complete the applicable ETD and/or CMT alarm resolution. The urn still cannot proceed because it is partially shielded.":any?"Alarm resolution recorded. The urn still cannot proceed because it is partially shielded.":"Required ETD and both CMT results recorded. The urn still cannot proceed because it is partially shielded.";cls="danger"}
+else if(system){title=clear?"CLEAR URN":"DO NOT CLEAR URN";detail=clear?"System alarm present, but ETD and both CMT results are clear.":"With a system alarm present, the urn may be cleared only when ETD and both CMT results are clear. Alarm resolution does not override this rule.";cls=clear?"success":"danger"}
+else if(clear||shortcut||(any&&allResolved)){title="CLEAR URN";detail=shortcut?"Under-350 mL shortcut selected. Use only if all approved shortcut conditions are met.":clear?"No system alarm and all required test results are clear.":"Applicable alarm resolution recorded with no threat detected.";cls="success"}
+else{title="DO NOT CLEAR URN";detail=any?"Follow applicable alarm-resolution steps before clearance can be considered.":"Confirm required testing pathway and approved shortcut conditions.";cls="danger"}
+out.innerHTML=`<div class="result ${cls}"><span class="pill">FINAL OUTCOME</span><h2>${title}</h2><p>${detail}</p>${emergency?"<p><strong>Urn:</strong> DO NOT CLEAR</p>":""}${partial?'<p><strong>Passenger:</strong> Refer to SDM or Line Lead for approved options.</p>':""}</div>`;
+}
+document.addEventListener("change",e=>{if(e.target.matches('input[type=radio]')){s[e.target.name]=e.target.value;render()}});
+document.querySelectorAll("[data-path]").forEach(b=>b.addEventListener("click",()=>{s.path=b.dataset.path;s.etd=s.path==="full"?"notdone":"clear";s.c1=s.path==="full"?"notdone":"negative";s.c2=s.path==="full"?"notdone":"negative";s.er="pending";s.cr="pending";s.threat="no";render()}));
+$("reset").addEventListener("click",()=>{Object.assign(s,{path:"partial",volume:"350plus",etd:"clear",c1:"negative",c2:"negative",er:"pending",cr:"pending",threat:"no"});render()});
+$("copy").addEventListener("click",()=>{const txt=`Cremated Remains Screening v1.03 TEST\nPath: ${s.path}\nVolume: ${s.volume}\nETD: ${s.etd}\nCMT 1: ${s.c1}\nCMT 2: ${s.c2}\nETD resolution: ${s.er}\nCMT resolution: ${s.cr}\nThreat found: ${s.threat}\nOutcome: ${out.querySelector("h2")?.textContent||"Unknown"}\nFor team verification only.`;if(navigator.clipboard?.writeText)navigator.clipboard.writeText(txt).then(()=>alert("Test result copied.")).catch(()=>prompt("Copy test result:",txt));else prompt("Copy test result:",txt)});
+render();
+</script></body></html>
